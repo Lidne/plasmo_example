@@ -26,6 +26,16 @@
   "manifest": {
     "host_permissions": [
       "https://*/*"
+    ],
+    "web_accessible_resources": [
+      {
+        "matches": [
+          "https://*/*"
+        ],
+        "resources": [
+          "assets/wasm/main.wasm"
+        ]
+      }
     ]
   }
 }
