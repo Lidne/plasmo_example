@@ -1,8 +1,11 @@
 // Copyright 2018 The Go Authors. All rights reserved.
 // Use of this source code is governed by a BSD-style
 import wasm_exec from "raw:~/assets/wasm/main.wasm"
+console.log(wasm_exec);
 
 // license that can be found in the LICENSE file.
+
+// this file is necessary for compiled golang working in browser
 export const config = {
   matches: ["https://*/*"],
   world: "MAIN"
@@ -674,7 +677,7 @@ export const config = {
 const loadWasm = async () => {
   try {
     const go = new Go()
-    console.log("some1")
+    // console.log("some1")
 
     const wasmModule = await WebAssembly.instantiateStreaming(
       fetch(wasm_exec),

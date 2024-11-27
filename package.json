@@ -33,7 +33,7 @@
           "https://*/*"
         ],
         "resources": [
-          "assets/wasm/main.wasm"
+          "*.wasm*"
         ]
       }
     ]
